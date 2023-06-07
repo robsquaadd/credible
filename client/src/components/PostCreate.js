@@ -14,7 +14,6 @@ const PostCreate = () => {
       try {
         // update me array's cache
         const { me } = cache.readQuery({ query: QUERY_ME });
-        console.log(me, cache);
         cache.writeQuery({
           query: QUERY_ME,
           data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },

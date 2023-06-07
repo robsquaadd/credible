@@ -1,6 +1,5 @@
 import "./App.css";
 import React from "react";
-import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
@@ -43,7 +42,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="*" element={<Signup />} />
-              <Route path="/checkoutsuccess" element={<Success/>}/>
+              <Route path="/checkoutsuccess" element={<Success />} />
             </Routes>
           </main>
         </div>

@@ -175,7 +175,7 @@ li {
 }
 
 #signup-form {
-  background-color: black;
+  background-color: var(--color1);
   z-index: 99;
   padding: 50px;
 }

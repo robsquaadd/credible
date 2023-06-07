@@ -1,6 +1,5 @@
 import React from "react";
 import AuthService from "../utils/auth";
-import { Modal, Icon } from "semantic-ui-react";
 
 function Nav({ id, userData, storeState, setStoreState }) {
   const [open, setOpen] = React.useState(false);
@@ -19,7 +18,7 @@ function Nav({ id, userData, storeState, setStoreState }) {
         {/* <li>
           <a href="/">Home</a>
         </li> */}
-        <li>
+        {/*<li>
           <Modal
             onClose={() => {
               navOut();
@@ -34,7 +33,7 @@ function Nav({ id, userData, storeState, setStoreState }) {
               <span>{<Icon name="close" onClick={navOut} />}</span>
             </Modal.Content>
           </Modal>
-        </li>
+          </li>*/}
         <li>{points} credits</li>
         <li>
           <button type="button" onClick={() => setStoreState(true)}>

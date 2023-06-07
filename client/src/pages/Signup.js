@@ -5,7 +5,6 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import credibleWord from "../images/signupCredible1.png";
 import AuthService from "../utils/auth";
-import { Button, Form, Image } from "semantic-ui-react";
 
 function Signup() {
   const [formState, setFormState] = useState({
@@ -52,62 +51,34 @@ function Signup() {
   return (
     <main id="sign-up-background">
       <div id="signup-container">
-        <Form
-          container="true"
-          stackable="true"
-          onSubmit={handleFormSubmit}
-          id="signup-form"
-        >
-          <header>
-            <a href="/" className="signup-header">
-              <h1>join credible</h1>
-            </a>
-          </header>
-
-          <Form.Group widths="equal">
-            <Form.Field>
-              <label htmlFor="username">username: </label>
-              <input
-                className="signup-input"
-                name="username"
-                type="text"
-                id="username"
-                placeholder="username"
-                onBlur={handleInputChange}
-              />
-            </Form.Field>
-            <Form.Field>
-              <label htmlFor="email">email: </label>
-              <input
-                className="signup-input"
-                name="email"
-                type="email"
-                id="email"
-                placeholder="email"
-                onBlur={handleInputChange}
-              />
-            </Form.Field>
-            <Form.Field>
-              <label htmlFor="password">password: </label>
-              <input
-                className="signup-input"
-                name="password"
-                type="password"
-                id="password"
-                placeholder="password"
-                onBlur={handleInputChange}
-              />
-            </Form.Field>
-          </Form.Group>
-          <Button type="submit" id="signup-btn">
-            sign up!
-          </Button>
-        </Form>
-        {error && <p>error: {formErrorMessage}</p>}
+        <form id="signup-form" onSubmit={handleFormSubmit}>
+          <label htmlFor="signup-username" name="signup-email">
+            Username:{" "}
+          </label>
+          <input
+            type="text"
+            id="signup-email"
+            name="signup-email"
+            placeholder="Type your username here."
+            onBlur={handleInputChange}
+          />
+          <br></br>
+          <br></br>
+          <label htmlFor="signup-password" name="signup-password">
+            Password:{" "}
+          </label>
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Type your password here."
+          />
+          <br></br>
+          <button type="submit" id="signup-button">
+            Sign-Up
+          </button>
+        </form>
         <Login id="log-in-button" />
         {/* note: login functionality is in the login component  */}
-
-        <Image centered id="credibleWord" src={credibleWord} />
       </div>
     </main>
   );
